@@ -28,6 +28,8 @@ class _OrderScreenState extends State<OrderScreen> {
               contact: "9838643649",
               price: "Paid (via esewa)",
             ),
+
+            
           ],
         ));
   }

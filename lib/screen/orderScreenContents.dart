@@ -24,7 +24,7 @@ class _OrderScreenContentsState extends State<OrderScreenContents> {
       padding: const EdgeInsets.all(20.0),
       child: Container(
         // color: Color(0xFFFFFF),
-        height: 400,
+        height: 550,
         width: MediaQuery.of(context).size.width,
         decoration: BoxDecoration(
             color: Colors.white,
