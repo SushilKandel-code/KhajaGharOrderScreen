@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:orderscreen/screen/orderScreen.dart';
+import 'package:orderscreen/LoginScreen/login.dart';
+
+import 'LoginScreen/register.dart';
 
 void main() {
   runApp(MyApp());
@@ -14,8 +16,12 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: OrderScreen(),
+      home: LoginScreen(),
       debugShowCheckedModeBanner: false,
+      routes: {
+        '/register': (context) => AccountRegister(),
+        '/login': (context) => LoginScreen(),
+      },
     );
   }
 }

@@ -101,7 +101,7 @@ class _OrderScreenDataState extends State<OrderScreenData> {
                     crossAxisAlignment: CrossAxisAlignment.center,
                     children: [
                       Padding(
-                        padding: const EdgeIngsets.only(right: 8.0),
+                        padding: const EdgeInsets.only(right: 8.0),
                         child: Container(
                             height: 25,
                             width: 25,
@@ -396,9 +396,7 @@ class _OrderScreenDataState extends State<OrderScreenData> {
                   Text("Maecenas ut convallis nullanon tincidunt")
                 ],
               ),
-              SizedBox(
-                width: 220.0,
-              ),
+              SizedBox(width: 180.0),
               _confirmOrder(),
               SizedBox(width: 20.0),
               _cancelOrder(),
@@ -422,7 +420,7 @@ class _OrderScreenDataState extends State<OrderScreenData> {
         border: Border.all(color: Colors.green),
         borderRadius: BorderRadius.circular(5),
       ),
-      child: FlatButton(
+      child: TextButton(
           onPressed: () {
             print('Confrim Order PRessed');
           },
@@ -443,7 +441,7 @@ class _OrderScreenDataState extends State<OrderScreenData> {
         border: Border.all(color: Colors.red),
         borderRadius: BorderRadius.circular(5),
       ),
-      child: FlatButton(
+      child: TextButton(
           onPressed: () {
             print('Cancel order pressed');
           },
