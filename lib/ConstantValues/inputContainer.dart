@@ -5,10 +5,10 @@ import 'colors.dart';
 class InputContainer extends StatelessWidget {
   final String hintText, labelText;
   final bool obsecureText;
-  Container prefixIcon;
-  GestureDetector suffix;
+  final Container prefixIcon;
+  final GestureDetector suffix;
   final TextInputType textInputType;
-  Function onValidate;
+  final Function onValidate;
 
   final TextEditingController controller;
 

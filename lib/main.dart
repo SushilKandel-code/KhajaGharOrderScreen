@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:orderscreen/Home/home.dart';
 import 'package:orderscreen/LoginScreen/login.dart';
-
 import 'LoginScreen/register.dart';
 
 void main() {
@@ -16,7 +16,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: LoginScreen(),
+      home: HomeScreen(),
       debugShowCheckedModeBanner: false,
       routes: {
         '/register': (context) => AccountRegister(),
