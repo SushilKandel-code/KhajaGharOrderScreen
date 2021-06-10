@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 
+// ignore: must_be_immutable
 class SearchContainer extends StatefulWidget {
   @override
   _SearchContainerState createState() => _SearchContainerState();
@@ -9,8 +10,16 @@ class SearchContainer extends StatefulWidget {
   final String name;
   final bool isVeg;
   Color iconColor;
+  final bool isFav;
+  String discountTagText;
 
-  SearchContainer({this.image, @required this.name, @required this.isVeg});
+  SearchContainer({
+    this.image,
+    this.name,
+    this.isVeg,
+    this.isFav,
+    this.discountTagText,
+  });
 }
 
 class _SearchContainerState extends State<SearchContainer> {
@@ -24,11 +33,11 @@ class _SearchContainerState extends State<SearchContainer> {
   Widget _searchMainContainer() {
     return Container(
         margin: EdgeInsets.all(10.0),
-        height: 122.0,
-        width: 107.0,
+        height: 130.0,
+        width: 125.0,
         decoration: BoxDecoration(
           color: Colors.grey.shade200,
-          borderRadius: BorderRadius.circular(20),
+          borderRadius: BorderRadius.circular(10),
         ),
         child: Stack(
           children: [
@@ -37,11 +46,12 @@ class _SearchContainerState extends State<SearchContainer> {
             //   height: MediaQuery.of(context).size.height,
             //   width: MediaQuery.of(context).size.width,
             // ),
-            _isFavourite(),
+            if (widget.isFav == true) _isFavourite() else _discountTag(),
+
             if (widget.isVeg == true)
               _smallVegContainer()
             else
-              _smallChickenContainer()
+              _smallChickenContainer(),
           ],
         ));
   }
@@ -156,6 +166,28 @@ class _SearchContainerState extends State<SearchContainer> {
       ],
     );
   }
+
+  Widget _discountTag() {
+    return Container(
+      margin: EdgeInsets.only(
+        top: 10.0,
+      ),
+      height: 20.0,
+      width: 100.0,
+      decoration: BoxDecoration(
+        color: Color(0xff30B700),
+        borderRadius: BorderRadius.circular(3.0),
+      ),
+      child: Center(
+        child: Text(
+          widget.discountTagText,
+          style: TextStyle(
+            fontSize: 10.0,
+            color: Colors.white,
+            fontWeight: FontWeight.normal,
+          ),
+        ),
+      ),
+    );
+  }
 }
-
-

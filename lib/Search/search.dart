@@ -21,27 +21,22 @@ class _SearchScreenState extends State<SearchScreen> {
     return AppBar(
       backgroundColor: Colors.white,
       elevation: 1.0,
-      leading: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          Padding(
-            padding: const EdgeInsets.only(left: 30.0),
-            child: Row(
-              crossAxisAlignment: CrossAxisAlignment.center,
-              children: [
-                Icon(
-                  Icons.arrow_back_ios,
-                  color: Colors.black,
-                  size: 15.0,
-                ),
-                SizedBox(
-                  width: 10.0,
-                ),
-                _searchContainer()
-              ],
+      title: Padding(
+        padding: const EdgeInsets.only(left: 10.0),
+        child: Row(
+          mainAxisSize: MainAxisSize.max,
+          children: [
+            Icon(
+              Icons.arrow_back_ios,
+              color: Colors.black,
+              size: 15.0,
             ),
-          ),
-        ],
+            Padding(
+              padding: const EdgeInsets.only(left: 15.0),
+              child: _searchContainer(),
+            ),
+          ],
+        ),
       ),
     );
   }

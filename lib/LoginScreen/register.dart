@@ -18,7 +18,11 @@ class _AccountRegisterState extends State<AccountRegister> {
     return SafeArea(
       child: Scaffold(
         backgroundColor: Color(screenBackgroundColor),
-        body: ListView(children: [_registerContent()]),
+        body: ListView(
+          children: [
+            _registerContent(),
+          ],
+        ),
       ),
     );
   }
