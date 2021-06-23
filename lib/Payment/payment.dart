@@ -339,14 +339,14 @@ class _PaymentScreenState extends State<PaymentScreen> {
                       onPressed: () {
                         setState(() {
                           paymentNotifier.addPayment(
-                          PaymentModel(
-                            _paymentTypeName.text,
-                            Image.file(
-                              File(_imageFile.path),
+                            PaymentModel(
+                              _paymentTypeName.text,
+                              Image.file(
+                                File(_imageFile.path),
+                              ),
+                              false,
                             ),
-                            false,
-                          ),
-                        );
+                          );
                         });
                       },
                       child: Text(
