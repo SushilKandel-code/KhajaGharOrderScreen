@@ -9,6 +9,15 @@ const Color emptyCartColor = Color(0xff707070);
 const TextStyle mediumTextStyle =
     TextStyle(fontSize: 20.0, fontWeight: FontWeight.w700);
 
+const TextStyle normalTextStyle = TextStyle(
+    fontSize: 18.0, fontWeight: FontWeight.normal, color: Colors.black);
+
+const TextStyle secondMediumTextStyle =
+    TextStyle(fontSize: 16.0, fontWeight: FontWeight.w700, color: Colors.black);
+
+const TextStyle normalMediumTextStyle = TextStyle(
+    fontSize: 16.0, fontWeight: FontWeight.normal, color: Colors.black);
+
 const TextStyle bigTextStyle =
     TextStyle(fontSize: 28.0, fontWeight: FontWeight.w700);
 
@@ -20,6 +29,10 @@ const TextStyle subEmptyCartTextStyle = TextStyle(
 
 const TextStyle subTextStyle = TextStyle(
     fontSize: 14.0, fontWeight: FontWeight.normal, color: subTextColor);
+
+const TextStyle elevationButtonTextStyle = TextStyle(
+    fontSize: 14.0, fontWeight: FontWeight.normal, color: Colors.black);
+
 
 const TextStyle hintTextStyle = TextStyle(
     fontSize: 16.0, fontWeight: FontWeight.normal, color: subTextColor);

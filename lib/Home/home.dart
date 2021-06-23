@@ -2,9 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:orderscreen/Cart/cart.dart';
 import 'package:orderscreen/Notification/notification.dart';
-import 'package:orderscreen/Profile/profile.dart';
 import 'package:orderscreen/Search/search.dart';
 import 'package:orderscreen/Home/homeContent.dart';
+import 'package:orderscreen/Setting/setting.dart';
 
 class HomeScreen extends StatefulWidget {
   @override
@@ -20,7 +20,7 @@ class _HomeScreenState extends State<HomeScreen> {
     SearchScreen(),
     CartScreen(),
     NotificationScreen(),
-    ProfileScreen(),
+    SettingScreen(),
   ];
 
   final List _buttonNavigationBarItem = <BottomNavigationBarItem>[
@@ -53,9 +53,9 @@ class _HomeScreenState extends State<HomeScreen> {
       label: '',
     ),
     BottomNavigationBarItem(
-      icon: FaIcon(
-        FontAwesomeIcons.user,
-        size: 20.0,
+      icon: Icon(
+        Icons.settings_outlined,
+        size: 25.0,
       ),
       label: '',
     )

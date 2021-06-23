@@ -1,10 +1,20 @@
 import 'package:flutter/material.dart';
 import 'package:orderscreen/Home/home.dart';
 import 'package:orderscreen/LoginScreen/login.dart';
+import 'package:orderscreen/Payment/payment.dart';
+import 'package:provider/provider.dart';
 import 'LoginScreen/register.dart';
+import 'Provider/paymentProvider.dart';
 
 void main() {
-  runApp(MyApp());
+  runApp(
+    MultiProvider(
+      providers: [
+        ChangeNotifierProvider(create: (_) => PaymentNotifier()),
+      ],
+      child: MyApp(),
+    ),
+   );
 }
 
 class MyApp extends StatelessWidget {
@@ -21,6 +31,7 @@ class MyApp extends StatelessWidget {
       routes: {
         '/register': (context) => AccountRegister(),
         '/login': (context) => LoginScreen(),
+        '/payment': (context) => PaymentScreen(),
       },
     );
   }
